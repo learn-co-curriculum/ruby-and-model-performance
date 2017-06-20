@@ -6,21 +6,21 @@ To improve performance we can rely on previously computed values instead of reco
 
 * [Memoize in Ruby](http://gavinmiller.io/2013/basics-of-ruby-memoization/)
 
-### Sql Caching
+### SQL Caching
 
 Activerecord will provide caching for you out of the box.  Caching is when instead of computing a value twice, the program simply references the result of the first computation.
 
 For activerecord, if you search for `Author.all` or any query multiple times on a request, activerecord will not query the database multiple times.  Instead, it references the already completed query.
 
-You can read more about how database caching works with rails here: 
-[Sql Caching](http://guides.rubyonrails.org/caching_with_rails.html#sql-caching)
+You can read more about how database caching works with Rails here: 
+[SQL Caching](http://guides.rubyonrails.org/caching_with_rails.html#sql-caching)
 
 	
 ### Caching Queries
 
-While activerecord will cache queries made in the same request for you automatically, sometimes you may want to retrieve queries from the cache the first time the query is made in a cache.  To achieve something like this, we can lean on the memcache store in rails.  Take a look at the benefits of using the memcache store, and how to set it up by looking at the following resources: 
+While activerecord will cache queries made in the same request for you automatically, sometimes you may want to retrieve queries from the cache the first time the query is made in a cache.  To achieve something like this, we can lean on the memcache store in Rails.  Take a look at the benefits of using the memcache store, and how to set it up by looking at the following resources: 
 
-First watch the first few minutes talking about Redis.  Redis is a separate database, that works similarly to how memcache (or caching in memory) works in rails.  You can stop after a few minutes, when the video moves onto talking about pubsub with redis, that is a separate topic.  
+First watch the first few minutes of the below video which discusses Redis.  Redis is a separate database, that works similarly to how memcache (or caching in memory) works in Rails.  You can stop after a few minutes, when the video moves onto talking about pubsub with Redis, that is a separate topic.  
 
 * [Redis Video](https://www.youtube.com/watch?v=OeVHnyztV9A)
 
